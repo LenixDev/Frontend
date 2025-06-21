@@ -3,31 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Products & Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: #2a2a2a;
+            padding: 1rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: #2a2a2a;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .icon-box { background: linear-gradient(135deg, #d2691e, #a0522d); }
+        .icon-gem { background: linear-gradient(135deg, #ff1493, #8b008b); }
+        .icon-shield { background: linear-gradient(135deg, #00bfff, #1e90ff); }
+        .icon-code { background: linear-gradient(135deg, #6a5acd, #483d8b); }
+        .icon-film { background: linear-gradient(135deg, #ff4500, #dc143c); }
+        .icon-terminal { background: linear-gradient(135deg, #32cd32, #228b22); }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-period {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo-container">
-            <img src="logo.png" alt="Website Logo" class="logo-img primary">
-            <img src="banner.png" alt="Website Banner" class="logo-img secondary">
-        </a>
-        <a href="index.html" class="company-title">Trippler Hub</a>
-        <nav>
-            <ul>
-                <li><a href="products.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🎯</div>
+                <span class="logo-text">Trippler Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <h1>Our Products</h1>
-        <p>This is the products page content.</p>
-    </main>
+    <div class="container">
+        <div class="header">
+            <h1>Our Products & Services</h1>
+            <p class="subtitle">The Current Available Products On Hub's Stock</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </footer>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon icon-box">📦</div>
+                <h3 class="product-title">Rp Server Files V2</h3>
+                <div class="product-price">$29.77</div>
+                <div class="product-period">One-time purchase</div>
+                <a href="#" class="btn">Get Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon icon-gem">💎</div>
+                <h3 class="product-title">Discord Boosts</h3>
+                <div class="product-price">$6.39</div>
+                <div class="product-period">Per Month</div>
+                <a href="#" class="btn">Subscribe</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon icon-shield">🛡️</div>
+                <h3 class="product-title">Security Package</h3>
+                <div class="product-price">$8.99</div>
+                <div class="product-period">Month - $34.99 Lifetime</div>
+                <a href="#" class="btn">Choose Plan</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon icon-code">💻</div>
+                <h3 class="product-title">Discord Server Development</h3>
+                <div class="product-price">$5.99</div>
+                <div class="product-period">Starting Price</div>
+                <a href="#" class="btn">Start Project</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon icon-film">🎬</div>
+                <h3 class="product-title">Rockstar Filming</h3>
+                <div class="product-price">$29.99</div>
+                <div class="product-period">Per Minute</div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon icon-terminal">⚡</div>
+                <h3 class="product-title">Developing Server From Scratch</h3>
+                <div class="product-price">$20.00</div>
+                <div class="product-period">Starting Price</div>
+                <a href="#" class="btn">Get Quote</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
