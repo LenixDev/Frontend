@@ -4,212 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Trippler Hub</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #1a1a1a;
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        .navbar {
-            background: #2a2a2a;
-            padding: 1rem 0;
-            border-bottom: 1px solid #333;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .logo-icon img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover { color: #4ecdc4; }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .contact-info, .contact-form {
-            background: #2a2a2a;
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid #333;
-        }
-
-        .contact-info h2, .contact-form h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #4ecdc4;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover { transform: translateX(5px); }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact-icon img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-        }
-
-        .contact-text h3 {
-            color: #fff;
-            margin-bottom: 0.3rem;
-            font-size: 1rem;
-        }
-
-        .contact-text p {
-            color: #ccc;
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #ccc;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #404040;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 0.9rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #4ecdc4;
-        }
-
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .submit-btn:hover { transform: translateY(-2px); }
-
-        @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .header h1 { font-size: 2rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
                 <div class="logo-icon">
-                    <img src="" alt="Logo">
+                    <img src="images/logo/logo.png" alt="">
                 </div>
                 <span>Trippler Hub</span>
             </a>
@@ -232,8 +35,9 @@
                 <p style="color: #ccc; margin-bottom: 1.5rem;">We're here to help with any questions or support you need.</p>
                 
                 <div class="contact-item">
+                    <a href="#"></a>
                     <div class="contact-icon">
-                        <img src="" alt="Live Chat">
+                        <i class="fas fa-comments"></i>
                     </div>
                     <div class="contact-text">
                         <h3>Live Chat</h3>
@@ -243,17 +47,17 @@
 
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <img src="" alt="Phone">
+                        <i class="fas fa-phone"></i>
                     </div>
                     <div class="contact-text">
                         <h3>Phone</h3>
-                        <p>+1-800-297-2837</p>
+                        <p>+213-549-131-811</p>
                     </div>
                 </div>
 
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <img src="" alt="Email">
+                        <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-text">
                         <h3>Email</h3>
@@ -263,17 +67,7 @@
 
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <img src="" alt="Location">
-                    </div>
-                    <div class="contact-text">
-                        <h3>Location</h3>
-                        <p>Worldwide Support</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <img src="" alt="Discord">
+                        <i class="fab fa-discord"></i>
                     </div>
                     <div class="contact-text">
                         <h3>Discord</h3>
