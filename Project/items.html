@@ -267,6 +267,103 @@
             max-width: 800px;
         }
 
+        .related-products {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e5e7;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #1d1d1f;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: #2d2d30;
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-icon.box {
+            background: linear-gradient(135deg, #d4a574, #c49660);
+            position: relative;
+        }
+
+        .product-icon.box::before {
+            content: "📦";
+            font-size: 2rem;
+        }
+
+        .product-icon.discord {
+            background: linear-gradient(135deg, #ff00ff, #cc00cc);
+            position: relative;
+        }
+
+        .product-icon.discord::before {
+            content: "🔷";
+            font-size: 2rem;
+        }
+
+        .product-icon.security {
+            background: linear-gradient(135deg, #0099ff, #0066cc);
+            position: relative;
+        }
+
+        .product-icon.security::before {
+            content: "🛡️";
+            font-size: 2rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .product-period {
+            color: #999;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+        }
+
+        .product-original-price {
+            color: #666;
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+        }
+
         .price-large {
             font-size: 2.5rem;
             font-weight: 600;
@@ -380,6 +477,39 @@
                 This service work on the long term which you will decide how your server will look like depending on your demanding details and description, the more you invest the more professional server you get of course
             </p>
         </div>
+
+        <div class="related-products">
+            <h2 class="related-title">Related Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon box"></div>
+                    <div class="product-name">Rp Server Files V2</div>
+                    <div class="product-price">
+                        $29.77
+                        <span class="product-original-price">$937.50</span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon discord"></div>
+                    <div class="product-name">Discord Boosts</div>
+                    <div class="product-price">
+                        $6.39
+                        <span class="product-period">Per Month</span>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-icon security"></div>
+                    <div class="product-name">Security Package</div>
+                    <div class="product-price">
+                        $8.99<span class="product-period">Month</span> - $34.99<span class="product-period">Lifetime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 </body>
 </html>
