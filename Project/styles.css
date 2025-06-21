@@ -41,11 +41,11 @@ header {
 }
 
 .logo-img.primary {
-    animation: fadeInOut 5s infinite;
+    animation: fadeInOut 15s infinite;
 }
 
 .logo-img.secondary {
-    animation: fadeOutIn 5s infinite;
+    animation: fadeOutIn 15s infinite;
 }
 
 @keyframes fadeInOut {
